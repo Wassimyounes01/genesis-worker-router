@@ -1,0 +1,14 @@
+{
+  "name": "genesis-worker-router",
+  "node": ">=20",
+  "exports": {
+    "WorkerRouter": "class for bounded provider routing",
+    "createRouter": "options -> WorkerRouter",
+    "createSessionCliAdapter": "{ executable, askMode, tempRoot? } -> injected session-only provider",
+    "scrubEnvironment": "removes API-key, token, and secret environment variables",
+    "bounded": "string output cap helper"
+  },
+  "providerSchema": { "name": "string", "accountId": "string", "invoke": "async ({ prompt, signal, attempt, deadlineAt }) -> result" },
+  "resultSchema": { "ok": "boolean", "text": "string when successful", "actualModel": "unknown unless provider reports it", "monetaryCost": "unknown unless provider reports it" },
+  "integration": "Inject authenticated provider callbacks. The package never selects an API key, local model, shell, or fallback route."
+}
