@@ -1,4 +1,4 @@
-![Worker Router](docs/cover.svg?design=2)
+![Worker Router](docs/cover-v2.svg)
 
 # genesis-worker-router
 
